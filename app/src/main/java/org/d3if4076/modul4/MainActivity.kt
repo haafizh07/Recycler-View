@@ -3,7 +3,6 @@ package org.d3if4076.modul4
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.RecyclerView
@@ -18,12 +17,13 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        //Log.d("MainActivity", "Jumlah data: " + getData().size)
-        with(binding.recyclerView){
+
+        with(binding.recyclerView) {
             addItemDecoration(DividerItemDecoration(context, RecyclerView.VERTICAL))
             adapter = MainAdapter(getData())
             setHasFixedSize(true)
         }
+
     }
 
     private fun getData(): List<Hewan>{
@@ -38,7 +38,6 @@ class MainActivity : AppCompatActivity() {
             Hewan("Kerbau", "Bubalus bubalis", R.drawable.kerbau),
             Hewan("Kuda", "Equus caballus", R.drawable.kuda),
             Hewan("Sapi", "Bos taurus", R.drawable.sapi)
-
-                )
+        )
     }
 }
