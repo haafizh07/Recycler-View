@@ -1,8 +1,9 @@
-package org.d3if4076.modul4
+package org.d3if4076.modul4.ui.main
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import org.d3if4076.modul4.Hewan
 import org.d3if4076.modul4.databinding.ListItemBinding
 
 class MainAdapter(private val data: List<Hewan>) :
